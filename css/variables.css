@@ -1,0 +1,74 @@
+/*====================================================
+
+VOCES SIN BARRERAS
+VARIABLES.CSS
+
+====================================================*/
+
+:root{
+
+    /* COLORES PRINCIPALES */
+
+    --primary:#005a9c;
+
+    --secondary:#00c896;
+
+    --accent:#00d8a6;
+
+
+    /* COLORES GENERALES */
+
+    --background:#ffffff;
+
+    --text-color:#1f2937;
+
+    --text-light:#6b7280;
+
+    --gray-200:#e5e7eb;
+
+    --gray-700:#374151;
+
+
+    /* TIPOGRAFÍA */
+
+    --font:"Segoe UI",Arial,Helvetica,sans-serif;
+
+
+    /* CONTENEDOR */
+
+    --container:1200px;
+
+
+    /* TRANSICIONES */
+
+    --transition:.35s ease;
+
+
+    /* SOMBRAS */
+
+    --shadow-sm:0 5px 20px rgba(0,0,0,.08);
+
+    --shadow:0 10px 30px rgba(0,0,0,.12);
+
+    --shadow-lg:0 20px 45px rgba(0,0,0,.16);
+
+}
+
+
+/*====================================================
+MODO OSCURO
+====================================================*/
+
+body.dark-mode{
+
+    --background:#0f172a;
+
+    --text-color:#f8fafc;
+
+    --text-light:#cbd5e1;
+
+    --gray-200:#1e293b;
+
+    --gray-700:#e2e8f0;
+
+}
