@@ -1,4 +1,3 @@
-/* CORREGIDO: eliminado error de sintaxis ('l' sobrante antes de comentario). */
 /*======================================
 
 VOCES SIN BARRERAS
@@ -25,7 +24,9 @@ image:"assets/images/post1.jpg",
 
 description:"Conoce por qué la accesibilidad digital es fundamental para construir una web inclusiva.",
 
-content:"La accesibilidad permite que cualquier persona pueda utilizar un sitio web sin importar sus capacidades."
+content:"La accesibilidad permite que cualquier persona pueda utilizar un sitio web sin importar sus capacidades.",
+
+video:"https://www.youtube.com/watch?v=EOcVvy1mcYI"
 
 },
 
@@ -45,7 +46,9 @@ image:"assets/images/post2.jpg",
 
 description:"Descubre herramientas que ayudan a personas con discapacidad.",
 
-content:"Los lectores de pantalla, teclados adaptados y asistentes de voz hacen parte de estas tecnologías."
+content:"Los lectores de pantalla, teclados adaptados y asistentes de voz hacen parte de estas tecnologías.",
+
+video:"https://www.youtube.com/watch?v=UrKvl3GwlU0"
 
 },
 
@@ -79,6 +82,42 @@ GENERAR TARJETAS
 
 const postsContainer = document.getElementById("postsContainer");
 
+function getYouTubeEmbedUrl(url){
+
+if(!url) return "";
+
+try{
+
+const parsedUrl = new URL(url);
+
+let videoId = "";
+
+if(parsedUrl.hostname === "youtu.be"){
+
+videoId = parsedUrl.pathname.replace("/", "");
+
+}else if(parsedUrl.hostname.includes("youtube.com")){
+
+videoId = parsedUrl.searchParams.get("v") || "";
+
+if(!videoId && parsedUrl.pathname.startsWith("/embed/")){
+
+videoId = parsedUrl.pathname.split("/embed/")[1].split("/")[0];
+
+}
+
+}
+
+return videoId ? `https://www.youtube.com/embed/${videoId}` : "";
+
+}catch(error){
+
+return "";
+
+}
+
+}
+
 function renderPosts(list){
 
 if(!postsContainer) return;
@@ -86,6 +125,8 @@ if(!postsContainer) return;
 postsContainer.innerHTML="";
 
 list.forEach(post=>{
+
+const videoUrl = getYouTubeEmbedUrl(post.video);
 
 postsContainer.innerHTML+=`
 
@@ -111,7 +152,29 @@ ${post.author} • ${post.date}
 
 </small>
 
-<br><br>
+${videoUrl ? `
+
+<div class="post-video">
+
+<iframe
+
+src="${videoUrl}"
+
+title="${post.title}"
+
+loading="lazy"
+
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+` : ""}
+
+<br>
 
 <a href="#">
 
