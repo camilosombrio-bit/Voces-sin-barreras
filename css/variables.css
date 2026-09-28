@@ -1,74 +1,379 @@
-/*====================================================
+<!-- ==========================================
+     CONTACTO
+========================================== -->
 
-VOCES SIN BARRERAS
-VARIABLES.CSS
+<section id="contacto" class="section contact-section">
 
-====================================================*/
+    <div class="container">
 
-:root{
+        <div class="section-title center">
 
-    /* COLORES PRINCIPALES */
+            <span>
 
-    --primary:#005a9c;
+                Contáctanos
 
-    --secondary:#00c896;
+            </span>
 
-    --accent:#00d8a6;
+            <h2>
 
+                Queremos escucharte
 
-    /* COLORES GENERALES */
+            </h2>
 
-    --background:#ffffff;
+            <p>
 
-    --text-color:#1f2937;
+                Si deseas colaborar con este proyecto, compartir
+                información o resolver alguna duda, puedes escribirnos
+                mediante el siguiente formulario.
 
-    --text-light:#6b7280;
+            </p>
 
-    --gray-200:#e5e7eb;
+        </div>
 
-    --gray-700:#374151;
+        <!-- FORMULARIO COMPATIBLE CON NETLIFY -->
 
+        <form
+            name="contacto"
+            method="POST"
+            data-netlify="true"
+            class="contact-form">
 
-    /* TIPOGRAFÍA */
+            <input
+                type="hidden"
+                name="form-name"
+                value="contacto">
 
-    --font:"Segoe UI",Arial,Helvetica,sans-serif;
+            <div class="input-group">
 
+                <label>
 
-    /* CONTENEDOR */
+                    Nombre
 
-    --container:1200px;
+                </label>
 
+                <input
+                    type="text"
+                    name="nombre"
+                    required>
 
-    /* TRANSICIONES */
+            </div>
 
-    --transition:.35s ease;
+            <div class="input-group">
 
+                <label>
 
-    /* SOMBRAS */
+                    Correo electrónico
 
-    --shadow-sm:0 5px 20px rgba(0,0,0,.08);
+                </label>
 
-    --shadow:0 10px 30px rgba(0,0,0,.12);
+                <input
+                    type="email"
+                    name="correo"
+                    required>
 
-    --shadow-lg:0 20px 45px rgba(0,0,0,.16);
+            </div>
 
-}
+            <div class="input-group">
 
+                <label>
 
-/*====================================================
-MODO OSCURO
-====================================================*/
+                    Asunto
 
-body.dark-mode{
+                </label>
 
-    --background:#0f172a;
+                <input
+                    type="text"
+                    name="asunto">
 
-    --text-color:#f8fafc;
+            </div>
 
-    --text-light:#cbd5e1;
+            <div class="input-group">
 
-    --gray-200:#1e293b;
+                <label>
 
-    --gray-700:#e2e8f0;
+                    Mensaje
 
-}
+                </label>
+
+                <textarea
+                    name="mensaje"
+                    rows="6"
+                    required>
+
+                </textarea>
+
+            </div>
+
+            <button
+                type="submit"
+                class="btn-primary">
+
+                Enviar Mensaje
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     FOOTER
+========================================== -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<!-- LOGO -->
+
+<div>
+
+<img
+src="assets/logo/logo.png"
+alt="Logo"
+class="footer-logo">
+
+<h3>
+
+Voces Sin Barreras
+
+</h3>
+
+<p>
+
+Proyecto educativo desarrollado para promover
+la inclusión de la comunidad sorda mediante
+la tecnología y la educación.
+
+</p>
+
+</div>
+
+<!-- ENLACES -->
+
+<div>
+
+<h3>
+
+Navegación
+
+</h3>
+
+<ul>
+
+<li>
+
+<a href="#inicio">
+
+Inicio
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#comunidad">
+
+Comunidad
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#blog">
+
+Blog
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#videos">
+
+Videos
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#contacto">
+
+Contacto
+
+</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<!-- RECURSOS -->
+
+<div>
+
+<h3>
+
+Recursos
+
+</h3>
+
+<ul>
+
+<li>
+
+<a href="#">
+
+Guías
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#">
+
+Tutoriales
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#">
+
+Noticias
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#">
+
+Eventos
+
+</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<!-- REDES -->
+
+<div>
+
+<h3>
+
+Síguenos
+
+</h3>
+
+<div class="social-icons">
+
+<a href="#">
+
+<i class="fab fa-facebook-f"></i>
+
+</a>
+
+<a href="#">
+
+<i class="fab fa-instagram"></i>
+
+</a>
+
+<a href="#">
+
+<i class="fab fa-youtube"></i>
+
+</a>
+
+<a href="#">
+
+<i class="fab fa-linkedin-in"></i>
+
+</a>
+
+</div>
+
+<p>
+
+Correo:
+
+info@vocessinbarreras.com
+
+</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="copyright">
+
+<p>
+
+© 2026 Voces Sin Barreras.
+
+Todos los derechos reservados.
+
+</p>
+
+<p>
+
+Desarrollado por
+<strong>
+
+Juan Camilo Vásquez Romero
+
+</strong>
+
+como proyecto del SENA.
+
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+<!-- ==========================================
+     SCRIPTS
+========================================== -->
+
+<script src="js/posts.js"></script>
+
+<script src="js/menu.js"></script>
+
+<script src="js/darkmode.js"></script>
+
+<script src="js/search.js"></script>
+
+<script src="js/gallery.js"></script>
+
+<script src="js/slider.js"></script>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
